@@ -11,19 +11,31 @@ $(document).ready(function(){
     console.log(newGame);
   });
   $("#green-btn").click(function() {
-    newGame.playerPattern.push("green");
-    console.log(newGame);
+    if(newGame.simonPattern.length > 0) {
+      newGame.playerPattern.push("green");
+      newGame.compare();
+      console.log(newGame);
+    }
   });
   $("#red-btn").click(function() {
-    newGame.playerPattern.push("red");
-    console.log(newGame);
+    if(newGame.simonPattern.length > 0) {
+      newGame.playerPattern.push("red");
+      newGame.compare();
+      console.log(newGame);
+    }
   });
   $("#yellow-btn").click(function() {
-    newGame.playerPattern.push("yellow");
-    console.log(newGame);
+    if(newGame.simonPattern.length > 0) {
+      newGame.playerPattern.push("yellow");
+      newGame.compare();
+      console.log(newGame);
+    }
   });
   $("#blue-btn").click(function() {
-    newGame.playerPattern.push("blue");
-    console.log(newGame);
+    if(newGame.simonPattern.length > 0) {
+      newGame.playerPattern.push("blue");
+      newGame.compare();
+      console.log(newGame);
+    }
   });
 });
