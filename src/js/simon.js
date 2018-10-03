@@ -16,3 +16,22 @@ SimonGame.prototype.play = function() {
     this.simonPattern.push("blue");
   }
 };
+
+SimonGame.prototype.compare = function() {
+  if(this.simonPattern.length > 0) {
+    for(var i = 0; i < this.playerPattern.length; i ++) {
+      if(this.playerPattern[i] === this.simonPattern[i] && this.playerPattern.length === this.simonPattern.length) {
+        console.log("next round");
+        this.playerPattern = [];
+        this.play();
+        return;
+      } else if(this.playerPattern[i] !== this.simonPattern[i]) {
+        console.log("LOSE");
+        this.simonPattern = [];
+        this.playerPattern = [];
+        return;
+      }
+      console.log("continue");
+    }
+  }
+};
